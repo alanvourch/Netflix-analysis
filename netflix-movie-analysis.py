@@ -7,7 +7,7 @@ import streamlit as st
 # In[3]:
 
 
-from IPython.display import display, HTML
+# from IPython.display import display, HTML
 
 # URL of the image
 image_url = "https://gyanok.com/wp-content/uploads/2024/02/can-you-guess-the-netflix-show-by-the-emojis.jpg"
@@ -16,7 +16,7 @@ image_url = "https://gyanok.com/wp-content/uploads/2024/02/can-you-guess-the-net
 image_html = f'<div style="text-align: center;"><img src="{image_url}" width="853" height="479"></div>'
 
 # Display the centered image
-display(HTML(image_html))
+st.markdown(image_html, unsafe_allow_html=True)
 
 st.markdown(
 # # Introduction
@@ -724,7 +724,8 @@ fig.update_layout(height=750, width=1000);
 # In[ ]:
 
 
-fig.show()
+st.plotly_chart(fig, use_container_width=True)
+
 
 
 # ### 🎯 Runtime vs IMDb Rating
