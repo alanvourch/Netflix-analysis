@@ -1,5 +1,4 @@
-voila
-ipywidgets
-plotly
+streamlit
 pandas
 numpy
+plotly
